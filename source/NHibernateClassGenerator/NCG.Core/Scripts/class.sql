@@ -6,7 +6,11 @@ public class ' + UPPER(LEFT(@TableName,1))+LOWER(SUBSTRING(@TableName,2,LEN(@Tab
 {'
 
 select @Result = @Result + '
-    public virtual ' + ColumnType + NullableSign + ' ' + ColumnName + ' { get; set; }
+
+	/// <summary>
+	/// Comment
+	/// </summary>
+	public virtual ' + ColumnType + NullableSign + ' ' + ColumnName + ' { get; set; }
 '
 from
 (

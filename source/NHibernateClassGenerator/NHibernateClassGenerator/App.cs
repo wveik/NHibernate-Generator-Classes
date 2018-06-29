@@ -24,6 +24,7 @@ namespace NHibernateClassGenerator
             var domain = new DomainLayer(new MainArg(txtConnectionString.Text, txtScheme.Text, txtTableName.Text));
             txtDomainCode.Text = domain.GetClass();
             txtMapCode.Text = domain.GetMap();
+            txtServices.Text = domain.GetServices();
         }
     }
 }

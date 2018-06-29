@@ -60,6 +60,8 @@
             this.txtConnectionString = new System.Windows.Forms.TextBox();
             this.advanceSettingsTabPage = new System.Windows.Forms.TabPage();
             this.txtMapCode = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtServices = new System.Windows.Forms.TextBox();
             this.mainTabControl.SuspendLayout();
             this.basicTab.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -68,6 +70,7 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableGroupBox.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTabControl
@@ -115,6 +118,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(246, 84);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -370,6 +374,27 @@
             this.txtMapCode.Size = new System.Drawing.Size(667, 351);
             this.txtMapCode.TabIndex = 1;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.txtServices);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(673, 357);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Services";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // txtServices
+            // 
+            this.txtServices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtServices.Location = new System.Drawing.Point(3, 3);
+            this.txtServices.Multiline = true;
+            this.txtServices.Name = "txtServices";
+            this.txtServices.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtServices.Size = new System.Drawing.Size(667, 351);
+            this.txtServices.TabIndex = 1;
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +415,8 @@
             this.tabPage3.PerformLayout();
             this.tableGroupBox.ResumeLayout(false);
             this.tableGroupBox.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -428,6 +455,8 @@
         private System.Windows.Forms.Button generateButton;
         private System.Windows.Forms.TextBox txtDomainCode;
         private System.Windows.Forms.TextBox txtMapCode;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TextBox txtServices;
     }
 }
 
