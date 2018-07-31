@@ -30,7 +30,13 @@
         {
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.basicTab = new System.Windows.Forms.TabPage();
+            this.btnGetData = new System.Windows.Forms.Button();
+            this.btnSaveConnection = new System.Windows.Forms.Button();
+            this.tabControlModes = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.generateButton = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.generateModernButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dbTableDetailsGridView = new System.Windows.Forms.DataGridView();
@@ -46,8 +52,11 @@
             this.ForeignKeyTableName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ForeignKeyColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtMapCode = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtDomainCode = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtServices = new System.Windows.Forms.TextBox();
             this.tableGroupBox = new System.Windows.Forms.GroupBox();
             this.TableFilterTextBox = new System.Windows.Forms.TextBox();
             this.tablesListBox = new System.Windows.Forms.ListBox();
@@ -59,18 +68,18 @@
             this.labelConnectionString = new System.Windows.Forms.Label();
             this.txtConnectionString = new System.Windows.Forms.TextBox();
             this.advanceSettingsTabPage = new System.Windows.Forms.TabPage();
-            this.txtMapCode = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.txtServices = new System.Windows.Forms.TextBox();
             this.mainTabControl.SuspendLayout();
             this.basicTab.SuspendLayout();
+            this.tabControlModes.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbTableDetailsGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tableGroupBox.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tableGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTabControl
@@ -86,7 +95,9 @@
             // 
             // basicTab
             // 
-            this.basicTab.Controls.Add(this.generateButton);
+            this.basicTab.Controls.Add(this.btnGetData);
+            this.basicTab.Controls.Add(this.btnSaveConnection);
+            this.basicTab.Controls.Add(this.tabControlModes);
             this.basicTab.Controls.Add(this.tabControl1);
             this.basicTab.Controls.Add(this.tableGroupBox);
             this.basicTab.Controls.Add(this.labelTableName);
@@ -103,15 +114,77 @@
             this.basicTab.Text = "tabPage1";
             this.basicTab.UseVisualStyleBackColor = true;
             // 
+            // btnGetData
+            // 
+            this.btnGetData.Location = new System.Drawing.Point(547, 3);
+            this.btnGetData.Name = "btnGetData";
+            this.btnGetData.Size = new System.Drawing.Size(75, 23);
+            this.btnGetData.TabIndex = 27;
+            this.btnGetData.Text = "Get Info";
+            this.btnGetData.UseVisualStyleBackColor = true;
+            this.btnGetData.Click += new System.EventHandler(this.btnGetInfo_Click);
+            // 
+            // btnSaveConnection
+            // 
+            this.btnSaveConnection.Location = new System.Drawing.Point(466, 3);
+            this.btnSaveConnection.Name = "btnSaveConnection";
+            this.btnSaveConnection.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveConnection.TabIndex = 26;
+            this.btnSaveConnection.Text = "Save Info";
+            this.btnSaveConnection.UseVisualStyleBackColor = true;
+            this.btnSaveConnection.Click += new System.EventHandler(this.btnSaveConnection_Click);
+            // 
+            // tabControlModes
+            // 
+            this.tabControlModes.Controls.Add(this.tabPage5);
+            this.tabControlModes.Controls.Add(this.tabPage6);
+            this.tabControlModes.Location = new System.Drawing.Point(12, 472);
+            this.tabControlModes.Name = "tabControlModes";
+            this.tabControlModes.SelectedIndex = 0;
+            this.tabControlModes.Size = new System.Drawing.Size(399, 100);
+            this.tabControlModes.TabIndex = 25;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.generateButton);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(391, 74);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "SimpleMode";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // generateButton
             // 
-            this.generateButton.Location = new System.Drawing.Point(12, 544);
+            this.generateButton.Location = new System.Drawing.Point(6, 45);
             this.generateButton.Name = "generateButton";
             this.generateButton.Size = new System.Drawing.Size(106, 23);
             this.generateButton.TabIndex = 24;
             this.generateButton.Text = "&Generate";
             this.generateButton.UseVisualStyleBackColor = true;
             this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.generateModernButton);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(391, 74);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Moder Mode";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // generateModernButton
+            // 
+            this.generateModernButton.Location = new System.Drawing.Point(6, 45);
+            this.generateModernButton.Name = "generateModernButton";
+            this.generateModernButton.Size = new System.Drawing.Size(106, 23);
+            this.generateModernButton.TabIndex = 25;
+            this.generateModernButton.Text = "&Generate";
+            this.generateModernButton.UseVisualStyleBackColor = true;
+            this.generateModernButton.Click += new System.EventHandler(this.generateModernButton_Click);
             // 
             // tabControl1
             // 
@@ -238,6 +311,16 @@
             this.tabPage2.Text = "Map Code";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txtMapCode
+            // 
+            this.txtMapCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMapCode.Location = new System.Drawing.Point(3, 3);
+            this.txtMapCode.Multiline = true;
+            this.txtMapCode.Name = "txtMapCode";
+            this.txtMapCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtMapCode.Size = new System.Drawing.Size(667, 351);
+            this.txtMapCode.TabIndex = 1;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.txtDomainCode);
@@ -258,6 +341,27 @@
             this.txtDomainCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDomainCode.Size = new System.Drawing.Size(667, 351);
             this.txtDomainCode.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.txtServices);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(673, 357);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Services";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // txtServices
+            // 
+            this.txtServices.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtServices.Location = new System.Drawing.Point(3, 3);
+            this.txtServices.Multiline = true;
+            this.txtServices.Name = "txtServices";
+            this.txtServices.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtServices.Size = new System.Drawing.Size(667, 351);
+            this.txtServices.TabIndex = 1;
             // 
             // tableGroupBox
             // 
@@ -364,37 +468,6 @@
             this.advanceSettingsTabPage.Text = "tabPage2";
             this.advanceSettingsTabPage.UseVisualStyleBackColor = true;
             // 
-            // txtMapCode
-            // 
-            this.txtMapCode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMapCode.Location = new System.Drawing.Point(3, 3);
-            this.txtMapCode.Multiline = true;
-            this.txtMapCode.Name = "txtMapCode";
-            this.txtMapCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMapCode.Size = new System.Drawing.Size(667, 351);
-            this.txtMapCode.TabIndex = 1;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.txtServices);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(673, 357);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Services";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // txtServices
-            // 
-            this.txtServices.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtServices.Location = new System.Drawing.Point(3, 3);
-            this.txtServices.Multiline = true;
-            this.txtServices.Name = "txtServices";
-            this.txtServices.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtServices.Size = new System.Drawing.Size(667, 351);
-            this.txtServices.TabIndex = 1;
-            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +479,9 @@
             this.mainTabControl.ResumeLayout(false);
             this.basicTab.ResumeLayout(false);
             this.basicTab.PerformLayout();
+            this.tabControlModes.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dbTableDetailsGridView)).EndInit();
@@ -413,10 +489,10 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tableGroupBox.ResumeLayout(false);
-            this.tableGroupBox.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tableGroupBox.ResumeLayout(false);
+            this.tableGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -457,6 +533,12 @@
         private System.Windows.Forms.TextBox txtMapCode;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox txtServices;
+        private System.Windows.Forms.TabControl tabControlModes;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button generateModernButton;
+        private System.Windows.Forms.Button btnGetData;
+        private System.Windows.Forms.Button btnSaveConnection;
     }
 }
 

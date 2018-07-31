@@ -8,7 +8,9 @@ public class ' + UPPER(LEFT(@TableName,1))+LOWER(SUBSTRING(@TableName,2,LEN(@Tab
 select @Result = @Result + '
 
 	/// <summary>
-	/// Comment
+	/// ' + 
+	ColumnName
+	+ ' : 
 	/// </summary>
 	public virtual ' + ColumnType + NullableSign + ' ' + ColumnName + ' { get; set; }
 '

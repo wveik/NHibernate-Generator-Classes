@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using NCG.Core.CoreArgs;
 using NCG.Core.DAL;
+using NCG.Core.Domain.inter;
 
 namespace NCG.Core.Domain
 {
-    public class DomainLayer
+    public class DomainLayer : IDomainLayer
     {
         private const string PathScripts = "Scripts";
         private const string PathToClass = "class.sql";

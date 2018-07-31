@@ -41,12 +41,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoreArgs\MainArg.cs" />
+    <Compile Include="CoreArgs\MainContainer.cs" />
     <Compile Include="DAL\AdoRepository.cs" />
     <Compile Include="Domain\DomainLayer.cs" />
+    <Compile Include="Domain\inter\IDomainLayer.cs" />
+    <Compile Include="Domain\ModernDomainLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModernScripts\columns.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Scripts\class.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
